@@ -1,0 +1,810 @@
+
+:root {
+  --main-color: #131C26;
+  --blue: #2E3057;
+  --orange: #EE583F;
+  --rose: #F7B3CC;
+  --gold: #C7B65E;
+  --white: #FFF7EE;
+}
+
+
+/* ---------- GLOBAL RESET (minimal, sane) ---------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Calibri', sans-serif;
+  color: var(--main-color);
+  font-size: 16px;           /* Body default */
+  line-height: 1.5;
+}
+
+a {
+  color: var(--blue);
+  text-decoration-color: var(--gold);
+}
+
+a:hover {
+  color: var(--orange);
+  text-decoration-color: var(--orange);
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+  padding: 20px 40px;
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* top row: logo + title + nav */
+.header-top {
+  display: flex;
+  align-items: center;
+}
+
+/* logo */
+.logo img {
+  height: 60px;
+}
+
+/* title stack */
+.title-group {
+  margin-left: 16px;
+}
+
+/* Titles */
+.title-large {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+}
+
+.title {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+.title-group h1 {
+  font-size: 1.5rem;
+  color: #2E4057;
+}
+
+.title-group p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  color: #2E4057;
+}
+
+/* Subtitles */
+.subtitle {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--main-color);
+}
+
+/* Body text */
+.body-large {
+  font-family: 'Calibri', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: var(--main-color);
+}
+
+.body-strong {
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+.body {
+  font-family: 'Calibri', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+/* Captions */
+.caption {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: var(--main-color);
+}
+
+/* nav pushed to the right */
+header nav {
+  margin-left: auto;
+  
+}
+
+/* horizontal nav items */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+header nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--blue);
+  position: relative;
+}
+
+header nav a:hover {
+  color: var(--orange);
+}
+
+header nav a:visited {
+  color: #1F2240;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: rgba(46, 48, 87, 0.3);  /* softer underline */
+}
+
+header nav a.active {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  padding: 20px;
+  background-color: rgb(247, 179, 204, 0.5);
+  border-top: 1px solid rgba(46,48,87,0.1);
+}
+
+/* top row: newsletter + social */
+.footer-top {
+  display: flex;
+  align-items: center;
+}
+
+/* newsletter slightly left of center */
+.newsletter {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* newsletter form */
+.newsletter form {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 8px;
+  background-color: var(--white);
+  border: 1px solid rgba(46,48,87,0.25);
+}
+
+.newsletter input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.newsletter button {
+  align-self: center;
+  padding: 10px 28px;
+
+  background-color: var(--blue);
+  color: var(--white);
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.newsletter button:hover {
+  background-color: var(--orange);  /* change background */
+}
+
+/* social media to the right */
+.social-media {
+  margin-left: auto;
+  display: flex;
+  gap: 24px;
+}
+
+.social-media a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* footer nav centered */
+.footer-nav {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+
+/* =========================
+   ABOUT US PAGE
+========================= */
+
+.about-us-page,
+.events-page {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+/* ---------- ABOUT HEADING ---------- */
+
+.about-section h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+/* ---------- IMAGE + DESCRIPTION ---------- */
+
+.about-content {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* image takes more space */
+.business-image {
+  flex: 1.4;
+}
+
+.business-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+/* text slightly smaller share */
+.business-description {
+  flex: 1;
+}
+
+
+/* ---------- BUSINESS HOURS ---------- */
+
+.business-hours {
+  width: 100%;
+  margin: 32px 0;
+  padding: 24px 40px;
+  background-color: rgba(247,179,204,0.35);
+  text-align: left;
+}
+
+
+/* ---------- CONTACT US ---------- */
+
+.contact-us {
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+.contact-us h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* form container */
+.contact-form {
+  width: 33%;
+  min-width: 320px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* label + field row */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* labels */
+.form-row label {
+  width: 80px;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* inputs */
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid rgba(46,48,87,0.25);
+}
+
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.contact-form button {
+  align-self: center;
+  padding: 10px 28px;
+
+  background-color: var(--orange);
+  color: var(--white);
+
+  border: none;
+  border-radius: 15px; 
+  box-shadow: none;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.contact-form button:hover {
+  background-color: #dd502f;  /* change background */
+}
+
+/* =========================
+   EVENTS PAGE
+========================= */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.events-page {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+
+
+/* ---------- EVENTS HEADING ---------- */
+
+.events-section h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+/* ---------- IMAGE + DESCRIPTION ---------- */
+
+.event-item {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* image takes more space */
+.event-image {
+  flex: 1.4;
+}
+
+.event-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+/* text slightly smaller share */
+.event-description {
+  flex: 1;
+}
+
+/* ===== GALLERY PAGE ===== */
+/* ===== GENERAL PAGE WRAPPER ===== */
+.gallery-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+  box-sizing: border-box;
+}
+
+/* ===== TOP BAR: TITLE LEFT / CART RIGHT ===== */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px; /* slight indent from both sides */
+}
+
+.gallery-header h1 {
+  margin: 0;
+}
+
+.view-cart {
+  padding: 10px 20px;
+  border-radius: 20px; /* rounded corners */
+  cursor: pointer;
+  border: none;
+  background-color: #0077cc;
+  color: white;
+  font-weight: 600;
+}
+
+.view-cart:hover {
+  background-color: #A98833;  /* change background */
+}
+
+
+
+/* ===== DIVIDER LINE ===== */
+.gallery-page hr {
+  margin: 30px 0 40px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* ===== GRID: 3 x 3 ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.book-card {
+  display: flex;
+  flex-direction: column;        /* stack top row + button */
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 250px;             /* ensures cards have base height */
+  justify-content: flex-start;
+}
+
+.gallery-card,
+.book-card {
+  background-color: var(--white);
+  border: 1px solid rgba(46,48,87,0.15);
+  border-radius: 10px;
+}
+
+.card-button button,
+.book-card button {
+  align-self: center;
+  padding: 10px 28px;
+
+  background-color: var(--orange);
+  color: var(--white);
+
+  border: none;
+  border-radius: 15px; 
+  box-shadow: none;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.card-button button:hover, .book-card button:hover {
+  background-color: #dd502f;  /* change background */
+}
+
+.view-cart {
+  align-self: center;
+  padding: 10px 28px;
+
+  background-color: var(--gold);
+  color: var(--white);
+
+  border: none;
+  border-radius: 15px; 
+  box-shadow: none;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+
+/* ===== TOP ROW: IMAGE + TEXT ===== */
+.card-content1 {
+  display: flex;
+  flex-direction: row;           /* image left, text right */
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* ===== IMAGE BOX ===== */
+.item-image1 {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.item-image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ===== TEXT BOX ===== */
+.item-info1 {
+  flex: 1;                       /* fills remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info1 p {
+  margin: 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* BUTTON BELOW CARD CONTENT */
+.card-button {
+  margin-top: 15px;           /* space from top row */
+  display: flex;              /* make flex container */
+  justify-content: center;    /* center button horizontally */
+}
+
+.card-button button:hover {
+  background-color: #dd502f;  /* change background */
+}
+
+
+/* =========================
+  HOMEPAGE
+========================= */
+.index {
+  padding: 40px 20px;
+  max-width: 1200px; /* optional: limit page width */
+  margin: 0 auto;
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+
+.client-highlights h1 {
+  text-align: center;
+}
+
+.our-books h1,
+.shopping-with-us h1,
+.categories h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 80px;
+}
+
+/* =========================
+  CLIENT HIGHLIGHTS
+========================= */
+.highlight-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;     /* total section width */
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: nowrap;      /* keep image and text in a row */
+}
+
+.highlight-image {
+  flex: 0 0 auto;  /* prevent flex from stretching it */
+  width: 400px;    /* desired width */
+  height: 400px;   /* optional for square */
+}
+
+.highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- PROMO GALLERY ---------- */
+.promo-gallery {
+  display: flex;
+  justify-content: center; /* center all items horizontally */
+  gap: 10px;               /* space between images */
+  max-width: 1200px;       /* optional: limit total width */
+  margin: 0 auto 0px;     /* center container and spacing below */
+}
+
+.promo-gallery img {
+  height: 80px;            /* your smaller size */
+  width: 1000px;            /* fixed width for all images */
+  object-fit: cover;       /* fill nicely */
+  display: block;
+}
+
+/* =========================
+  OUR BOOKS
+========================= */
+.book-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== CARD ===== */
+.gallery-card {
+  flex: 1 1 calc(20% - 16px);
+  max-width: calc(20% - 16px);
+
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: var(--white);
+  border: 1px solid rgba(46,48,87,0.15);
+  border-radius: 10px;
+
+  aspect-ratio: 1 / 1;           /* makes the card square */
+  justify-content: space-between; /* spreads content top -> button */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;        /* stack image + text */
+  align-items: center;           /* center content horizontally */
+  gap: 8px;                      /* space between image and text */
+  flex: 1;                       /* take up available space */
+  overflow: hidden;              /* prevent overflowing text */
+  text-align: center;
+}
+
+.item-image {
+  width: 100px;                   /* smaller, consistent size */
+  height: 100px;                  /* square image box */
+  flex-shrink: 0;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;            /* fit inside box without stretching */
+}
+
+.item-info p {
+  font-size: 0.85rem;             /* smaller so it fits nicely */
+  line-height: 1.2;
+  word-break: break-word;
+  overflow: hidden;               /* prevents overflow in tight squares */
+  text-overflow: ellipsis;        /* optional: adds … if text too long */
+}
+
+.gallery-card,
+.book-card {
+  background-color: var(--white);
+  border: 1px solid rgba(46,48,87,0.15);
+  border-radius: 10px;
+}
+
+.card-button button,
+.book-card button {
+  align-self: center;
+  padding: 10px 28px;
+
+  background-color: var(--orange);
+  color: var(--white);
+
+  border: none;
+  border-radius: 15px; 
+  box-shadow: none;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* =========================
+  SHOPPING WITH US / PERKS
+========================= */
+.perks {
+  display: flex;
+  gap: 20px;
+}
+
+.perk {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.perk {
+  background-color: rgba(247,179,204,0.25);
+  border: 1px solid rgba(46,48,87,0.15);
+  border-radius: 10px;
+}
+
+
+/* =========================
+  CATEGORIES
+========================= */
+.category-list {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid rgba(46,48,87,0.15);
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(247,179,204,0.25);
+  
+  display: flex;            /* make container a flexbox */
+  flex-direction: column;   /* stack children vertically */
+  justify-content: center;  /* center children vertically */
+  align-items: center;      /* center children horizontally (optional) */
+}
+
+.item-info h3.title {
+  font-size: 1rem; /* match your .body font size */
+  font-weight: bold; /* optional, if you want it bold */
+  margin: 0 0 0.25em 0; /* keep some spacing below */
+}
+
+.item-info1 h3.title {
+  font-size: 1rem;        /* same size as .body text */
+  font-weight: bold;      /* optional bold for title */
+  margin: 0 0 0.25em 0;   /* small spacing below title */
+  line-height: 1.2;       /* adjust spacing if needed */
+}

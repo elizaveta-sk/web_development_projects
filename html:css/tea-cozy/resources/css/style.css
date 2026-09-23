@@ -1,0 +1,144 @@
+/*
+    Main Styling
+ */
+
+body {
+    font-family: Helvetica, serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
+
+/*
+    Navigation Bar Styling
+ */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+}
+
+.logo{
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav li {
+    display: inline-block;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+/*
+    Mission Section Styling
+ */
+
+
+.mission-section {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 1200px;
+    height: 700px;
+    background-image: url("../images/mission-background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.mission-description{
+    background-color: black;
+    width: 100%;
+}
+
+/*
+    Month Tea Styling
+ */
+
+.month-tea-description {
+    text-align: center;
+    width: 1000px;
+    margin: 20px auto auto;
+}
+
+.tea-types-container {
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    margin: auto;
+}
+
+.tea-img {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.tea-img p {
+    margin: auto;
+    text-align: center;
+}
+
+.tea-img img {
+    width: 300px;
+    height: 200px;
+}
+
+/*
+    Tea Location Styling
+ */
+
+.location-container {
+    background-image: url("../images/locations-background.png");
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 400px;
+    margin: 50px auto auto;
+}
+
+.location-container h2 {
+    text-align: center;
+    border-bottom: 15px;
+    padding-top: 30px;
+}
+
+.location-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    text-align: center;
+}
+
+.location {
+    width: 300px;
+    height: 250px;
+    background-color: black;
+    opacity: 1;
+    margin: auto 40px auto auto;
+}
+
+/*
+    Contacts Section Styling
+ */
+
+.contact-section {
+    text-align: center;
+}
+
+/*
+    Footer Section Styling
+ */
+
+#copywriter {
+    margin-left: 20px;
+}

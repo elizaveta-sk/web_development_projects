@@ -1,0 +1,209 @@
+/*
+    Global Styling
+*/
+
+body {
+    font-family: 'Cabin', sans-serif;
+    background-color: black;
+}
+
+
+/*
+    Navigation Bar Styling
+*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgb(255, 204, 0);
+    padding: 20px;
+}
+
+.logo {
+    padding: 15px;
+    height: 70px;
+}
+
+
+/*
+    Banner Section Styling
+ */
+
+.banner-container {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url("../images/main-background.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-item h1 {
+    color: rgb(255, 204, 0);
+    font-size: 4rem;
+}
+
+.button {
+    background-color: rgb(255, 204, 0);
+    color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 0 70px;
+}
+
+
+/*
+    Crossfit Section Styling
+*/
+
+#crossfit-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    padding: 20px;
+    color: rgb(255, 204, 0);
+}
+
+.section-description {
+    width: 50%;
+    height: auto;
+    padding: 0 20px;
+    line-height: 35px;
+    font-size: 1.15rem;
+    text-align: justify;
+    color: white;
+}
+
+
+/*
+    Pricing Section Styling
+*/
+
+#pricing-section {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pricing-item {
+    padding: 30px;
+    text-align: center;
+}
+
+.pricing-item:hover {
+    background-image: url("../images/crossfit-badge.jpeg");
+    background-size: cover;
+    background-position: center;
+    border: solid 2px;
+    border-radius: 15px;
+}
+
+.pricing-item h3 {
+    color: white;
+    font-weight: bolder;
+}
+
+.training-type {
+    color: white;
+}
+
+.price-content {
+    color: rgb(255, 204, 0);
+}
+
+
+/*
+    Contacts Section Styling
+*/
+
+#contacts-section {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    font-weight: bold;
+}
+
+.contact-item:hover {
+    color: rgb(255, 204, 0);
+}
+
+#street-coordinates {
+    color: white;
+    padding: 30px;
+    text-decoration: none;
+}
+
+#street-coordinates:hover {
+    color: rgb(255, 204, 0);
+}
+
+
+/*
+    Footer Section Styling
+*/
+
+footer p {
+    color: rgb(255, 204, 0);
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+/*
+    Media queries for mobile
+*/
+
+@media only screen and (max-width: 480px) {
+    .pricing-container,
+    .contacts-container {
+        flex-direction: column;
+    }
+}
