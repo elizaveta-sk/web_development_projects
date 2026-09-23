@@ -1,0 +1,14 @@
+# Generated dependency folders and build output are intentionally not part of this portfolio.
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+coverage/
+**/coverage/
+
+# Local-only configuration
+.env
+**/.env
+.DS_Store
